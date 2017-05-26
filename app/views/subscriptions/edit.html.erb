@@ -1,0 +1,55 @@
+<!-- Validation failure messages -->
+<% if @subscription.errors.any? %>
+  <% @subscription.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Edit Subscription #<%= @subscription.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/update_subscription/<%= @subscription.id %>" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for client_id -->
+      <div class="form-group">
+        <label for="client_id" class="control-label">
+          Client
+        </label>
+
+        <input type="text" id="client_id" name="client_id" placeholder="Client" class="form-control" value="<%= @subscription.client_id %>">
+      </div>
+
+      <!-- Label and input for plan_id -->
+      <div class="form-group">
+        <label for="plan_id" class="control-label">
+          Plan
+        </label>
+
+        <input type="text" id="plan_id" name="plan_id" placeholder="Plan" class="form-control" value="<%= @subscription.plan_id %>">
+      </div>
+
+      <!-- Label and input for end_date -->
+      <div class="form-group">
+        <label for="end_date" class="control-label">
+          End date
+        </label>
+
+        <input type="text" id="end_date" name="end_date" placeholder="End date" class="form-control" value="<%= @subscription.end_date %>">
+      </div>
+
+      <button class="btn btn-warning">
+        Update Subscription
+      </button>
+      or
+      <a href="/subscriptions/<%= @subscription.id %>">Cancel</a>
+    </form>
+  </div>
+</div>

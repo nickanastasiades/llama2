@@ -1,0 +1,31 @@
+<div class="page-header">
+  <h3>Subscription #<%= @subscription.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12 mb-2">
+    <dl class="dl-horizontal">
+      <dt>Client</dt>
+      <dd><%= @subscription.client_id %></dd>
+
+      <dt>Plan</dt>
+      <dd><%= @subscription.plan_id %></dd>
+
+      <dt>End date</dt>
+      <dd><%= @subscription.end_date %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/subscriptions" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/subscriptions/<%= @subscription.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_subscription/<%= @subscription.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>

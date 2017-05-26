@@ -1,0 +1,57 @@
+<!-- Validation failure messages -->
+<% if @project.errors.any? %>
+  <% @project.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+<form action="/projects/new">
+<div class="row">
+  <div class="col-md-9 light-body">
+    <div class="row">
+      <div class="col-md-2 progresss mobile-only">
+        <img src="/images/progress-1.png" width="100"/>
+      </div>
+    <div class="col-md-10">
+    <h1 class="page-title">How Can We Help?</h1>
+  </div>
+</div>
+
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <a class="project_type_select" href="/projects/new?project_type=Website+Update"><i class="fa fa-desktop" aria-hidden="true"></i><br>Website<br>Update</a>
+
+      <a class="project_type_select" href="/projects/new?project_type=Logo+%2F+Branding"><i class="fa fa-bolt" aria-hidden="true"></i><br>Logo /<br>Branding</a>
+
+      <a class="project_type_select" href="/projects/new?project_type=Slide+Decks+%2F+Presentations"><i class="fa fa-slideshare" aria-hidden="true"></i><br>Slide Decks /<br>Presentations</a>
+
+      <a class="project_type_select" href="/projects/new?project_type=Social+Media+Postings"><i class="fa fa-facebook-square" aria-hidden="true"></i><br>Social Media<br>Postings</a>
+
+      <a class="project_type_select" href="/projects/new?project_type=Digital+Marketing"><i class="fa fa-bullhorn" aria-hidden="true"></i><br>Digital<br>Marketing</a>
+
+      <a class="project_type_select" href="/projects/new?project_type=Flyers%2C+Cards+or+Brochures"><i class="fa fa-file-o" aria-hidden="true"></i><br>Flyers, Cards<br>or Brochures</a>
+
+      <a class="project_type_select" href="/projects/new?project_type=Graphics+%2F+Icons"><i class="fa fa-codepen" aria-hidden="true"></i><br>Graphics /<br>Icons</a>
+
+      <a class="project_type_select" href="/projects/new?project_type=Search+Engine+Optimization"><i class="fa fa-search" aria-hidden="true"></i><br>Search Engine<br>Optimization</a>
+
+      <a class="project_type_select" href="/projects/new?project_type=UI+%2F+UX"><i class="fa fa-mobile" aria-hidden="true"></i><br>UI /<br>UX</a>
+
+      <a class="project_type_select" href="/projects/new?project_type=Email+Marketing"><i class="fa fa-envelope-o" aria-hidden="true"></i><br>Email<br>Marketing</a>
+
+      <a class="project_type_select" href="/projects/new?project_type=Something+Else"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><br>Something<br>Else</a>
+
+
+  </div>
+  <div class="col-md-3 side-menu scrollify no-padding text-left">
+    <div class="side-progress"><a class="sidelink active" href="/projects/start"><i class="fa fa-circle" aria-hidden="true"></i> Project Type</a></div>
+    <div class="side-progress"><span class="sidelink inactive disabled"><i class="fa fa-circle-thin" aria-hidden="true"></i> Project Details</span></div>
+    <div class="side-progress"><span class="sidelink inactive disabled"><i class="fa fa-circle-thin" aria-hidden="true"></i> Upload Files</span></div>
+    <div class="side-progress"><span class="sidelink inactive disabled"><i class="fa fa-circle-thin" aria-hidden="true"></i> Review Project</span></div>
+    </div>
+
+</div>
+</form>

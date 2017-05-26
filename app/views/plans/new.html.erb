@@ -1,0 +1,55 @@
+<!-- Validation failure messages -->
+<% if @plan.errors.any? %>
+  <% @plan.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Add Plan</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/create_plan" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for name -->
+      <div class="form-group">
+        <label for="name" class="control-label">
+          Name
+        </label>
+
+        <input type="text" id="name" name="name" placeholder="Name" class="form-control" value="<%= @plan.name %>">
+      </div>
+
+      <!-- Label and input for price -->
+      <div class="form-group">
+        <label for="price" class="control-label">
+          Price
+        </label>
+
+        <input type="text" id="price" name="price" placeholder="Price" class="form-control" value="<%= @plan.price %>">
+      </div>
+
+      <!-- Label and input for hours -->
+      <div class="form-group">
+        <label for="hours" class="control-label">
+          Hours
+        </label>
+
+        <input type="text" id="hours" name="hours" placeholder="Hours" class="form-control" value="<%= @plan.hours %>">
+      </div>
+
+      <button class="btn btn-success">
+        Create Plan
+      </button>
+      or
+      <a href="/plans">Cancel</a>
+    </form>
+  </div>
+</div>

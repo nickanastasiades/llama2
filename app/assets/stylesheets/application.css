@@ -2,8 +2,8 @@
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
  *
  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
@@ -13,3 +13,60 @@
  *= require_tree .
  *= require_self
  */
+body {background: #f7f7f7;}
+h1, h2, h3, h4, h5, h6 {font-weight: normal; color: #33414d;}
+a {text-decoration: none !important;}
+body {font-size: 15px;}
+a.button, a:link.button, a:visited.button, input[type=submit], input[type=button], button {box-shadow: none!important;}
+button:not(.disabled):hover {background: none; background-image: none !important;}
+.no-padding {padding: 0px !important;}
+.text-center {text-align: center !important;}
+.footer-row {text-align: center; margin-top: 40px;}
+.copyright {text-align: center; color: #6a737c; font-size: 12px; margin-top: 8px; margin-bottom: 50px;}
+.footer-menu {text-transform: uppercase; font-weight: 600; font-size: 12px; margin: 5px; color: #6a737c !important;}
+.navbar-default {background: none; margin-bottom: 28px;}
+.navbar-default .navbar-nav>li>a {color: #33414d; font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px;}
+.new-project-btn {background-color: #16d4d4; border-radius: 100px; padding: 12px 30px !important; margin-top: 8px; margin-left: 10px;}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {color:#1bdcdc;}
+.new-project-btn:hover, .new-project-btn:focus {background-color: #1bdcdc !important; color: #33414d!important;}
+.main-logo {width: 40px;}
+.navbar-brand {padding: 7px 15px;}
+.navbar {margin-top: 10px}
+.dark-body {background-color: #33414d; padding: 30px 4%; margin-top: 50px; box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.05);}
+.light-body {background-color: #fff; padding: 30px 4% 60px 4%; min-height: 500px; box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.05);}
+.hello {color: #fff; font-weight: 600; font-size: 40px; margin-bottom: 12px; margin-top: 30px;}
+.intro {color: #fff; font-weight: 300; font-size: 40px; margin-bottom: 12px; margin-bottom: 40px; line-height: 50px;}
+.blue-btn-lg {background-color: #16d4d4 !important; color: #33414d !important; border-radius: 100px; padding: 16px 32px; text-transform: uppercase; font-size: 16px; font-weight: 600; letter-spacing: 0.6px; margin-bottom: 50px; background: none; box-shadow: none; border: none; text-shadow: none;}
+.blue-btn-lg:hover, .blue-btn-lg:focus, .blue-btn-lg:active {background-color: #1bdcdc !important; color: #33414d !important; background-image: none !important;}
+.green-btn-huge {background-color: #80b33c !important; color: #fff !important; border-radius: 100px; padding: 20px 38px; text-transform: uppercase; font-size: 20px; font-weight: 600; letter-spacing: 0.6px; margin-bottom: 70px; background: none; box-shadow: none; border: none; text-shadow: none;}
+.green-btn-huge:hover, .green-btn-huge:focus, .green-btn-huge:active {background-color: #8dc73f !important; color: #fff !important; background-image: none !important;}
+.page-title {font-weight: 600;color: #33414d;margin-top: 16px; font-size: 36px; margin-bottom: 30px; width: 100%}
+.table-name {font-size: 22px; font-weight: 300}
+.projects-table > tbody > tr > td {vertical-align: middle; border-bottom: 1px solid #dfdfe1; height: 65px;}
+.projects-table > tbody > tr > td a {display:block; width:100%;}
+.big-next {border-radius: 0px; background: none; height: 100%; width: 100%;}
+.big-next:hover {background-color: #3b4a57 !important; background-image: none !important;}
+.next-btn {color: #fff; font-weight: 600; font-size: 40px; margin-bottom: 12px; margin-top: 30px;}
+.next-sub-btn {color: #fff; font-weight: 500; font-size: 16px; margin-bottom: 40px;}
+form input[type=text], form input[type=password], form input[type=email], form input[type=number], form input[type=url], form input[type=tel], form input[type=date], form input[type=time], form textarea {box-shadow: none; border: 2px solid #dce4ec; width: 90%;}
+form input[type=text]:focus, form input[type=password]:focus, form input[type=email]:focus, form input[type=number]:focus, form input[type=url]:focus, form input[type=tel]:focus, form input[type=date]:focus, form input[type=time]:focus, form textarea:focus {box-shadow: none; border: 2px solid #2c3e50;}
+.form-control {width: 90%}
+label {margin-bottom: 5px; font-weight: 600;}
+.x-icon {width: 16px; margin: 8px 14px 6px 6px; text-align: right;}
+.upload-table {width: 90%;}
+.upload-table > tbody > tr > td {vertical-align: middle;}
+.upload-table > tbody > tr > td:last-child {text-align: right;}
+.big-status {font-size: 20px;}
+.status-cell {margin-bottom: 40px; margin-top: 15px; text-align: right;}
+.project-details {font-size: 15px;}
+.side-menu {margin-top: 50px;}
+.side-progress {padding: 10px 0px 10px 35px;}
+.sidelink {font-size: 18px; font-weight: 600; color: #33414d !important; cursor: pointer; padding: 10px 5px; text-align: left;}
+.sidelink:hover {color: #16d4d4 !important; cursor: pointer;}
+.inactive {color: #8596a7 !important;}
+.active {color: #33414d !important;}
+.disabled:hover {color: #8596a7 !important; cursor: default;}
+.sideitem {padding: 20px 0px; border-bottom: 1px solid #ededed}
+.fa {margin-right: 8px;}
+
+}

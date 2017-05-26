@@ -1,0 +1,58 @@
+@media screen and (max-width: 991px) {
+    .scrollify {margin-top: 20px !important;}
+    .mobile-only {display: block!important;}
+    .desktop-only {display: none!important;}
+}
+@media screen and (min-width: 992px) {
+    .mobile-only {display: none !important;}
+    .desktop-only {display: block !important;}
+}
+
+.project_type_select {
+  border: 1px solid #d0d8df;
+display: inline-block;
+text-align: center;
+border-radius: 7px;
+font-size: 18px;
+margin: 8px;
+color: #33414d !important;
+height: 150px;
+width: 150px;
+padding: 32px 5px;
+line-height: 25px;
+cursor: pointer;
+}
+
+.project_type_select:hover {
+  border: 1px solid #33414d;
+color: #33414d !important;
+cursor: pointer;
+}
+
+.project_type_select > i {margin-bottom: 10px; margin-right: 0}
+
+
+.progresss {
+  text-align: center;
+  margin: 15px 0px;
+}
+
+input[type="file"] {
+  height: 180px;
+  padding: 75px 10px;
+  background: url(/images/upload-cloud.png) right center no-repeat;
+  background-size: 220px;
+}
+
+.announcement {
+  font-size: 36px;
+  font-weight: 300;
+}
+
+.project-img {
+  width: 200px;
+  height: 200px;
+  background-color: #000;
+  border-radius: 1000px;
+  background-size: cover !important;
+}

@@ -1,0 +1,79 @@
+<!-- Validation failure messages -->
+<% if @item.errors.any? %>
+  <% @item.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+<div class="row">
+  <div class="col-md-9 light-body">
+
+    <form action="/create_item" method="post" enctype="multipart/form-data">
+
+    <div class="row">
+      <div class="col-md-2 progresss mobile-only">
+        <img src="/images/progress-3.png" width="100"/>
+      </div>
+    <div class="col-md-10">
+    <h1 class="page-title">Upload Files</h1>
+  </div>
+
+</div>
+
+      <!-- Hidden input for authenticity token to protect from forgery -->
+
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for name -->
+      <div class="form-group">
+
+        <input type="hidden" id="name" name="name" placeholder="Name" class="form-control" value="<%= @item.name %>">
+      </div>
+
+        <!-- Label and input for name -->
+        <div class="form-group">
+
+          <input type="hidden" id="project_id" name="project_id" placeholder="Project ID" class="form-control" value="<%= @item.project_id %>">
+        </div>
+
+        <!-- Label and input for upload -->
+        <div class="form-group">
+
+<input name ="url" type="file" class="form-control" required>
+
+      </div>
+
+<!-- Label and input for description -->
+<div class="form-group">
+  <label for="description" class="control-label">
+    Describe Your File
+  </label>
+
+  <input type="text" id="description" name="description" placeholder="Description" class="form-control" value="<%= @item.description %>">
+</div>
+
+
+<p style="text-align:center; margin-top: 30px;"><button type="submit" class="blue-btn-lg">Upload</button></p>
+
+<hr style="margin-bottom: 30px; margin-top: 0px;"/>
+
+
+<p style="text-align:center; margin-top: 0px;">
+  <label for="description" class="control-label" style="margin-bottom:30px">
+    Ready?
+  </label><br/>
+  <a class="green-btn-huge" href="/projects/review/<%= @item.project_id %>">Submit Project</a></p>
+
+</form>
+
+  </div>
+    <div class="col-md-3 side-menu scrollify no-padding text-left">
+      <div class="side-progress"><span class="sidelink active" href="/projects/start"><i class="fa fa-check-circle" aria-hidden="true"></i> Project Type</span></div>
+      <div class="side-progress"><span class="sidelink active" href="javascript:history.back()"><i class="fa fa-check-circle" aria-hidden="true"></i> Project Details</span></div>
+      <div class="side-progress"><span class="sidelink active"><i class="fa fa-circle" aria-hidden="true"></i> Upload Files</span></div>
+      <div class="side-progress"><span class="sidelink inactive disabled"><i class="fa fa-circle-thin" aria-hidden="true"></i> Review Project</span></div>
+      </div>
+
+</div>

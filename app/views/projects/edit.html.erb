@@ -1,0 +1,84 @@
+<!-- Validation failure messages -->
+<% if @project.errors.any? %>
+  <% @project.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+<form action="/update_project/<%= @project.id %>" method="post">
+<div class="row">
+  <div class="col-md-9 light-body">
+    <div class="row">
+      <div class="col-md-2 progresss mobile-only">
+        <img src="/images/progress-2.png" width="100"/>
+      </div>
+    <div class="col-md-10">
+    <h1 class="page-title">Request Revision</h1>
+  </div>
+</div>
+
+      <!-- Hidden input for authenticity token to protect from forgery -->
+
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for title -->
+      <div class="form-group">
+        <label for="title" class="control-label">
+          Project Name
+        </label>
+
+        <input type="text" id="title" name="title" placeholder="What do you want to call the project?" class="form-control" value="<%= @project.title %>">
+      </div>
+
+      <!-- Label and input for type -->
+      <div class="form-group">
+
+        <input type="hidden" id="project_type" name="project_type" placeholder="Project Type" class="form-control" value="<%= @project.project_type %>">
+      </div>
+
+      <!-- Label and input for version -->
+      <div class="form-group">
+        <label for="version" class="control-label">
+          Version
+        </label>
+
+        <input type="text" id="version" name="version" placeholder="Version" class="form-control" value="<%= @project.version + 1%>" readonly>
+      </div>
+
+      <!-- Label and input for description -->
+      <div class="form-group">
+        <label for="description" class="control-label">
+          What would you like revised?
+        </label>
+
+        <textarea rows="6" id="description" name="description" placeholder="The more info you include here the more accurate our design will be." class="form-control" value="<%= @project.description %>"></textarea>
+      </div>
+
+      <!-- Label and input for status -->
+      <div class="form-group">
+
+        <input type="hidden" id="status" name="status" placeholder="Status" class="form-control" value="In Revision">
+      </div>
+
+      <!-- Label and input for status -->
+      <div class="form-group">
+
+        <input type="hidden" id="hours_used" name="hours_used" placeholder="Hours Used" class="form-control" value="<%= @project.hours_used %>">
+      </div>
+
+      <p style="text-align:left; margin-top: 30px;"><button type="submit" class="blue-btn-lg">Next</button></p>
+
+
+
+<img src="/images/bring-it.png" style="width: 100%;max-width:500px; margin-top: 10px; margin-bottom:-20px;"/>
+  </div>
+  <div class="col-md-3 side-menu scrollify no-padding text-left">
+    <div class="side-progress"><span class="sidelink active"><i class="fa fa-circle" aria-hidden="true"></i> Revision Details</span></div>
+    <div class="side-progress"><span class="sidelink inactive disabled"><i class="fa fa-circle-thin" aria-hidden="true"></i> Upload Revised Files</span></div>
+    <div class="side-progress"><span class="sidelink inactive disabled"><i class="fa fa-circle-thin" aria-hidden="true"></i> Submit Revision</span></div>
+    </div>
+
+</div>
+</form>
