@@ -52,6 +52,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem "starter_generators", :git => "https://github.com/raghubetina/starter_generators"
-gem "devise"
-gem "stripe"
