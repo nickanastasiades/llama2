@@ -98,7 +98,7 @@ class ItemsController < ApplicationController
     if URI(request.referer).path == "/items/#{@item.id}"
       redirect_to("/", :notice => "Item deleted.")
     else
-      redirect_to(:back, :notice => "")
+      redirect_to(request.env['HTTP_REFERER'], :notice => "Item deleted.")
     end
   end
 end

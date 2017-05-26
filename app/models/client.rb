@@ -6,7 +6,7 @@ class Client < ApplicationRecord
 
   has_many :projects, :dependent => :destroy
   has_many :subscriptions, :dependent => :destroy
-  belongs_to :company
+  belongs_to :company, optional: true
   has_many :items, :through => :projects, :source => :items
   has_many :plans, :through => :subscriptions, :source => :plan
 end

@@ -13,8 +13,8 @@
  *= require_tree .
  *= require_self
  */
-body {background: #f7f7f7;}
-h1, h2, h3, h4, h5, h6 {font-weight: normal; color: #33414d;}
+body {background: #f7f7f7; padding-top: 10px}
+h1, h2, h3, h4, h5, h6, a {font-weight: normal; color: #33414d;}
 a {text-decoration: none !important;}
 body {font-size: 15px;}
 a.button, a:link.button, a:visited.button, input[type=submit], input[type=button], button {box-shadow: none!important;}

@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   def index
-    @projects = Project.all
+    @projects = current_client.projects.all
 
     if @status == "Completed"
       @status_label = "Success"
@@ -61,7 +61,9 @@ class ProjectsController < ApplicationController
     @project.status = params[:status]
     @project.version = params[:version]
     @project.designer_id = params[:designer_id]
-    @project.hours_used = params[:hours_used]
+    @project.hours = params[:hours]
+    @project.client_id = params[:client_id]
+    @project.designer_id = params[:designer_id]
 
     save_status = @project.save
 
@@ -89,7 +91,9 @@ class ProjectsController < ApplicationController
     @project.status = params[:status]
     @project.version = params[:version]
     @project.designer_id = params[:designer_id]
-    @project.hours_used = params[:hours_used]
+    @project.hours = params[:hours]
+    @project.client_id = params[:client_id]
+    @project.designer_id = params[:designer_id]
 
     save_status = @project.save
 

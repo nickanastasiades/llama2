@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root to: "projects#index"
   # Routes for the Company resource:
   # CREATE
@@ -78,8 +79,8 @@ Rails.application.routes.draw do
   post "/create_project", :controller => "projects", :action => "create"
   get "/projects/review/:id", :controller => "projects", :action => "review"
   get "/projects/revise-submit/:id", :controller => "projects", :action => "revise_submit"
-
   # READ
+  get "/dashboard", :controller => "projects", :action => "index"
   get "/projects", :controller => "projects", :action => "index"
   get "/projects/:id", :controller => "projects", :action => "show"
 

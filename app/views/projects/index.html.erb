@@ -29,7 +29,7 @@
       <tr>
         <td style="width: 100px;"><a href="/projects/<%= project.id %>"><span class="label label-<%= status_label %>"><%= project.status %></span></td></a>
         <td><a href="/projects/<%= project.id %>" class="table-name"><%= project.title %></td><a>
-        <td style="text-align: right;"><a href="/projects/<%= project.id %>"><%= project.hours_used.to_i %> hours</td></a>
+        <td style="text-align: right;"><a href="/projects/<%= project.id %>"><%= project.hours.to_i %> hours</td></a>
       </tr>
       <% end %>
     </table>

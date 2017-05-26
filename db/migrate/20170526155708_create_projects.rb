@@ -8,6 +8,7 @@ class CreateProjects < ActiveRecord::Migration[5.0]
       t.integer :client_id
       t.integer :designer_id
       t.float :hours
+      t.string :title
 
       t.timestamps
 
