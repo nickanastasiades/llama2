@@ -12,44 +12,65 @@
   <h3>Add Subscription</h3>
 </div>
 
-<div class="row">
-  <div class="col-md-12">
-    <form action="/create_subscription" method="post">
-      <!-- Hidden input for authenticity token to protect from forgery -->
-      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+<form action="/create_subscription" method="post">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+  <input type="hidden" id="client_id" name="client_id" placeholder="Client" class="form-control" value="<%= current_client.id %>">
+  <input type="hidden" id="end_date" name="end_date" placeholder="End date" class="form-control" value="<%= @subscription.end_date %>">
 
-      <!-- Label and input for client_id -->
-      <div class="form-group">
-        <label for="client_id" class="control-label">
-          Client
-        </label>
+<div class="row pricing">
+					<div class="col-md-3">
+						<div class="well">
+							<h3><b>Plan 1</b></h3>
+							<hr>
+							<p>1 GB Datatransfer</p>
+							<hr>
+							<p>1 GB Storage</p>
+							<hr>
+							<p><b>€ 2,99 /PM</b></p>
+							<hr>
+							<button class="btn btn-success btn-block" name="plan_id" value="1">Select</button>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="well">
+							<h3><b>Plan 2</b></h3>
+							<hr>
+							<p>2 GB Datatransfer</p>
+							<hr>
+							<p>2 GB Storage</p>
+							<hr>
+							<p><b>€ 3,99 /PM</b></p>
+							<hr>
+							<button class="btn btn-success btn-block" name="plan_id" value="2">Select</button>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="well">
+							<h3><b>Plan 3</b></h3>
+							<hr>
+							<p>3 GB Datatransfer</p>
+							<hr>
+							<p>3 GB Storage</p>
+							<hr>
+							<p><b>€ 4,99 /PM</b></p>
+							<hr>
+							<button class="btn btn-success btn-block" name="plan_id" value="3">Select</button>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="well">
+							<h3><b>Plan 4</b></h3>
+							<hr>
+							<p>4 GB Datatransfer</p>
+							<hr>
+							<p>4 GB Storage</p>
+							<hr>
+							<p><b>€ 5,99 /PM</b></p>
+							<hr>
+              <button class="btn btn-success btn-block" name="plan_id" value="4">Select</button>
+						</div>
+					</div>
 
-        <input type="text" id="client_id" name="client_id" placeholder="Client" class="form-control" value="<%= @subscription.client_id %>">
-      </div>
-
-      <!-- Label and input for plan_id -->
-      <div class="form-group">
-        <label for="plan_id" class="control-label">
-          Plan
-        </label>
-
-        <input type="text" id="plan_id" name="plan_id" placeholder="Plan" class="form-control" value="<%= @subscription.plan_id %>">
-      </div>
-
-      <!-- Label and input for end_date -->
-      <div class="form-group">
-        <label for="end_date" class="control-label">
-          End date
-        </label>
-
-        <input type="text" id="end_date" name="end_date" placeholder="End date" class="form-control" value="<%= @subscription.end_date %>">
-      </div>
-
-      <button class="btn btn-success">
-        Create Subscription
-      </button>
-      or
-      <a href="/subscriptions">Cancel</a>
     </form>
   </div>
 </div>
