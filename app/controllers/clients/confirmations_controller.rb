@@ -26,10 +26,5 @@ class Clients::ConfirmationsController < Devise::ConfirmationsController
   #   super(resource_name, resource)
   # end
 
-  def show
-    super do |resource|
-        sign_in(resource)
-      end
-    end
-  end
+
 end

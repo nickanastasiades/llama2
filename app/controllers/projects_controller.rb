@@ -1,5 +1,10 @@
 class ProjectsController < ApplicationController
   def index
+    if current_client.plans.last == nil
+      redirect_to :controller => 'subscriptions', :action => 'new' 
+
+    else
+
     @projects = current_client.projects.all
 
     if @status == "Completed"
@@ -11,6 +16,8 @@ class ProjectsController < ApplicationController
     end
 
     render("projects/index.html.erb")
+
+    end
   end
 
   def show

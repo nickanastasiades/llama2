@@ -68,5 +68,9 @@ label {margin-bottom: 5px; font-weight: 600;}
 .disabled:hover {color: #8596a7 !important; cursor: default;}
 .sideitem {padding: 20px 0px; border-bottom: 1px solid #ededed}
 .fa {margin-right: 8px;}
-
-}
+input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="button"].btn-block {width: 90%;}
+.panel-heading {margin-bottom: 10px;}
+.panel-title {text-align: center; margin: 8px 20px;}
+.pricing {text-align: center;}
+.btn-success {color: #ffffff; background-color: #16d4d4; border-color: #16d4d4; border-radius: 100px; padding: 12px 30px;}
+.btn-success:hover, .btn-success:focus {color: #ffffff; background-color: #1bdcdc !important; border-color: #1bdcdc}
