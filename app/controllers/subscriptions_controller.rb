@@ -1,4 +1,9 @@
 class SubscriptionsController < ApplicationController
+  def confirm_email
+
+    render("subscriptions/confirm_email.html.erb")
+  end
+
   def index
     @subscriptions = Subscription.all
 
