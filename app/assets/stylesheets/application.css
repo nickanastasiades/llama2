@@ -74,3 +74,5 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 .pricing {text-align: center;}
 .btn-success {color: #ffffff; background-color: #16d4d4; border-color: #16d4d4; border-radius: 100px; padding: 12px 30px;}
 .btn-success:hover, .btn-success:focus {color: #ffffff; background-color: #1bdcdc !important; border-color: #1bdcdc}
+.progress-bar {background-color: #16d4d4; }
+.progress-bar-danger{background-color: #dc6549; }

@@ -6,6 +6,10 @@ class ProjectsController < ApplicationController
     else
 
     @projects = current_client.projects.all
+    @current_plan = Plan.find_by(:id => current_client.subscriptions.last.plan_id)
+    @current_plan_name = Plan.find_by(:id => current_client.subscriptions.last.plan_id).name
+    @current_plan_hours = Plan.find_by(:id => current_client.subscriptions.last.plan_id).hours.to_f
+    @total_used_hours = current_client.projects.sum(:hours)
 
     if @status == "Completed"
       @status_label = "Success"

@@ -3,9 +3,27 @@
     <h2 class="hello">Hello Nick,</h2>
     <h2 class="intro">What can we create today?</h2>
     <div style="margin-bottom:50px;"> <a href="/projects/start/" class="blue-btn-lg">New Project</a></div>
-    <p style="color: #fff;">Plan: <%= current_client.plans.order('updated_at DESC').last.name %></p>
-    <p style="color: #fff;">Hours Available: <%= current_client.plans.order('updated_at DESC').last.hours.to_f %></p>
-    <p style="color: #fff;">Hours Used: <%= current_client.projects.sum (:hours) %></p>
+    <p style="color: #fff;">Plan: <%= @current_plan_name %></p>
+
+<% if @current_plan_hours < @total_used_hours %>
+
+<div class="progress">
+  <div class="progress-bar progress-bar-danger" role="progressbar" style="width:100%">
+  </div>
+</div>
+
+<% else %>
+
+
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" style="width:<%= @total_used_hours * 100 / @current_plan_hours %>%">
+      </div>
+    </div>
+
+<% end %>
+
+<p style="color: #fff; text-align: right;">Hours Used: <%= @total_used_hours %></p>
+<p style="color: #fff; text-align: right;">Hours Available: <%= @current_plan_hours %></p>
   </div>
   <div class="col-md-8 light-body">
 
