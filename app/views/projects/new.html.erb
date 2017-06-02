@@ -62,13 +62,13 @@
       <!-- Label and input for hours -->
       <div class="form-group">
 
-        <input type="hidden" id="hours" name="hours" placeholder="Hours Used" class="form-control" value="0">
+        <input type="hidden" id="hours" name="hours" placeholder="Hours Used" class="form-control" value="1">
       </div>
 
       <!-- Label and input for client -->
       <div class="form-group">
 
-        <input type="hidden" id="client_id" name="client_id" class="form-control" value="1">
+        <input type="hidden" id="client_id" name="client_id" class="form-control" value="<%= current_client.id %>">
       </div>
 
       <!-- Label and input for designer -->

@@ -54,7 +54,8 @@ class Clients::RegistrationsController < Devise::RegistrationsController
   # end
 
   # The path used after sign up for inactive accounts.
-  # def after_inactive_sign_up_path_for(resource)
-  #   super(resource)
-  # end
+  #def after_inactive_sign_up_path_for(resource)
+#   render("subscriptions/confirm_email.html.erb")
+
+#  end
 end

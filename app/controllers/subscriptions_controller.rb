@@ -1,4 +1,5 @@
 class SubscriptionsController < ApplicationController
+
   def index
     @subscriptions = Subscription.all
 
@@ -27,7 +28,7 @@ class SubscriptionsController < ApplicationController
     save_status = @subscription.save
 
     if save_status == true
-      redirect_to("/subscriptions/#{@subscription.id}", :notice => "Subscription created successfully.")
+      redirect_to("/dashboard", :notice => "You updated your plan successfully.")
     else
       render("subscriptions/new.html.erb")
     end
@@ -63,7 +64,7 @@ class SubscriptionsController < ApplicationController
     if URI(request.referer).path == "/subscriptions/#{@subscription.id}"
       redirect_to("/", :notice => "Subscription deleted.")
     else
-      redirect_to(:back, :notice => "Subscription deleted.")
+      redirect_to("/subscriptions/", :notice => "Subscription deleted.")
     end
   end
 end
