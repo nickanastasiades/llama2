@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
   def index
-    if current_client.plans.last == nil
-      redirect_to :controller => 'subscriptions', :action => 'new' 
+    if current_client.subscriptions.last == nil
+      redirect_to :controller => 'subscriptions', :action => 'new'
 
     else
 
