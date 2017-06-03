@@ -11,6 +11,15 @@ class ProjectsController < ApplicationController
     @current_plan_hours = Plan.find_by(:id => current_client.subscriptions.last.plan_id).hours.to_f
     @total_used_hours = current_client.projects.sum(:hours)
 
+    d1 = Date.today
+    d0 = current_client.subscriptions.last.created_at
+    year_diff = d1.year - d0.year
+    month_diff = d1.month - d0.month + 1
+    months = year_diff / 12 + month_diff
+    @total_available_hours = @current_plan_hours * months + 1
+
+    @hours_remaining = @total_available_hours - @total_used_hours
+
     if @status == "Completed"
       @status_label = "Success"
     elsif @status == "In Progress"

@@ -71,7 +71,7 @@
   <div class="col-md-3 side-menu scrollify no-padding text-center">
     <div class="sideitem"><a class="sidelink" href="/dashboard"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back to Dashboard</a></div>
     <div class="sideitem"><a class="sidelink" href="/projects/<%= @project.id %>/edit/"><i class="fa fa-undo" aria-hidden="true"></i> Request Revision</a></div>
-    <div class="sideitem"><a class="sidelink" href="/delete_project/<%= @project.id %>"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete Project</a></div>
+    <div class="sideitem"><a data-confirm="Are you sure?" class="sidelink" href="/delete_project/<%= @project.id %>"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete Project</a></div>
     </div>
 </div>
 </div>

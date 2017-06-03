@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <title>Llama</title>
 
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.5/flatly/bootstrap.min.css">
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 
   <style>
@@ -19,7 +19,7 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -45,6 +45,7 @@
 
         <ul class="nav navbar-nav navbar-right">
           <li><a href="/dashboard">Dashboard</a></li>
+          <li><a href="/subscriptions/new">Change Plan</a></li>
           <li><a href="/clients/edit">Profile</a></li>
           <li><a href="/clients/sign_out" data-method="delete" rel="nofollow">Sign Out</a></li>
           <li><a class="new-project-btn" href="/projects/start">New Project</a></li>

@@ -16,6 +16,7 @@
 body {background: #f7f7f7; padding-top: 10px}
 h1, h2, h3, h4, h5, h6, a {font-weight: normal; color: #33414d;}
 a {text-decoration: none !important;}
+a:hover {color: #16d4d4;}
 body {font-size: 15px;}
 a.button, a:link.button, a:visited.button, input[type=submit], input[type=button], button {box-shadow: none!important;}
 button:not(.disabled):hover {background: none; background-image: none !important;}
@@ -26,7 +27,7 @@ button:not(.disabled):hover {background: none; background-image: none !important
 .footer-menu {text-transform: uppercase; font-weight: 600; font-size: 12px; margin: 5px; color: #6a737c !important;}
 .navbar-default {background: none; margin-bottom: 28px;}
 .navbar-default .navbar-nav>li>a {color: #33414d; font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px;}
-.new-project-btn {background-color: #16d4d4; border-radius: 100px; padding: 12px 30px !important; margin-top: 8px; margin-left: 10px;}
+.new-project-btn {background-color: #16d4d4; border-radius: 100px; padding: 12px 42px !important; margin-top: 8px; margin-left: 10px;}
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {color:#1bdcdc;}
 .new-project-btn:hover, .new-project-btn:focus {background-color: #1bdcdc !important; color: #33414d!important;}
 .main-logo {width: 40px;}
@@ -36,11 +37,11 @@ button:not(.disabled):hover {background: none; background-image: none !important
 .light-body {background-color: #fff; padding: 30px 4% 60px 4%; min-height: 500px; box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.05);}
 .hello {color: #fff; font-weight: 600; font-size: 40px; margin-bottom: 12px; margin-top: 30px;}
 .intro {color: #fff; font-weight: 300; font-size: 40px; margin-bottom: 12px; margin-bottom: 40px; line-height: 50px;}
-.blue-btn-lg {background-color: #16d4d4 !important; color: #33414d !important; border-radius: 100px; padding: 16px 32px; text-transform: uppercase; font-size: 16px; font-weight: 600; letter-spacing: 0.6px; margin-bottom: 50px; background: none; box-shadow: none; border: none; text-shadow: none;}
+.blue-btn-lg {background-color: #16d4d4 !important; color: #33414d !important; border-radius: 100px; padding: 16px 42px; text-transform: uppercase; font-size: 16px; font-weight: 600; letter-spacing: 0.6px; margin-bottom: 50px; background: none; box-shadow: none; border: none; text-shadow: none;}
 .blue-btn-lg:hover, .blue-btn-lg:focus, .blue-btn-lg:active {background-color: #1bdcdc !important; color: #33414d !important; background-image: none !important;}
-.green-btn-huge {background-color: #80b33c !important; color: #fff !important; border-radius: 100px; padding: 20px 38px; text-transform: uppercase; font-size: 20px; font-weight: 600; letter-spacing: 0.6px; margin-bottom: 70px; background: none; box-shadow: none; border: none; text-shadow: none;}
+.green-btn-huge {background-color: #80b33c !important; color: #fff !important; border-radius: 100px; padding: 20px 42px; text-transform: uppercase; font-size: 20px; font-weight: 600; letter-spacing: 0.6px; margin-bottom: 70px; background: none; box-shadow: none; border: none; text-shadow: none;}
 .green-btn-huge:hover, .green-btn-huge:focus, .green-btn-huge:active {background-color: #8dc73f !important; color: #fff !important; background-image: none !important;}
-.page-title {font-weight: 600;color: #33414d;margin-top: 16px; font-size: 36px; margin-bottom: 30px; width: 100%}
+.page-title {font-weight: 800;color: #33414d;margin-top: 16px; font-size: 36px; margin-bottom: 30px; width: 100%}
 .table-name {font-size: 22px; font-weight: 300}
 .projects-table > tbody > tr > td {vertical-align: middle; border-bottom: 1px solid #dfdfe1; height: 65px;}
 .projects-table > tbody > tr > td a {display:block; width:100%;}
@@ -72,7 +73,29 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 .panel-heading {margin-bottom: 10px;}
 .panel-title {text-align: center; margin: 8px 20px;}
 .pricing {text-align: center;}
-.btn-success {color: #ffffff; background-color: #16d4d4; border-color: #16d4d4; border-radius: 100px; padding: 12px 30px;}
+.btn-success {color: #ffffff; background-color: #16d4d4; border-color: #16d4d4; border-radius: 100px; padding: 12px 42px;}
 .btn-success:hover, .btn-success:focus {color: #ffffff; background-color: #1bdcdc !important; border-color: #1bdcdc}
 .progress-bar {background-color: #16d4d4; }
-.progress-bar-danger{background-color: #dc6549; }
+.progress-bar-danger{background-color: #dc6549;}
+.project_type_select > i {font-size: 25px;}
+.page-header {margin: 22px 0 21px;}
+.page-header > h3 {font-weight: 800; font-size: 32px;}
+.plan-logo {text-align:center; margin-top: 10px;}
+.plan-title {font-weight: 600; margin-bottom: 0}
+.plan-price {font-size: 60px; font-weight: 300; margin-bottom: 0px}
+.plan-hour {color: #4c5862; font-size: 24px; margin-bottom: 20px;}
+.plan-text {color: #4c5862; margin-bottom: 40px;}
+.well {background-color: #fff}
+.dash-date {color: #fff; font-size: 20px; font-weight: 300;}
+.dash-hours {color: #fff; font-size: 18px; text-align: right; font-weight: 300;}
+.dash-plan {color: #a3a6a8; font-size: 14px; text-align: right; text-transform: uppercase;}
+.welcome {font-weight: 800; font-size: 56px; margin-bottom: 0;}
+.subwelcome {color: #4c5862; font-weight: 300; margin-top: 15px; margin-bottom: 40px; line-height: 40px;}
+.extra-padding {padding: 50px 30px 30px 30px;}
+.help-block {display: none;}
+.navbar-default .navbar-toggle {border: none;}
+.navbar-default .navbar-toggle .icon-bar {background-color: #1a242f;}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {background-color: #fff;}
+.profile-small {font-size: 16px;}
+.profile-big {margin-top: 8px;}
+.panel-footer {padding: 30px 15px;}
