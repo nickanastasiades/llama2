@@ -86,17 +86,21 @@
   </div>
     <div class="col-md-1"></div>
 
-    <% @current_plan = Plan.find_by(:id => current_client.subscriptions.last.plan_id) %>
-    <% @current_plan_name = Plan.find_by(:id => current_client.subscriptions.last.plan_id).name %>
-    <% @current_plan_hours = Plan.find_by(:id => current_client.subscriptions.last.plan_id).hours.to_i %>
-    <% @total_used_hours = current_client.projects.sum(:hours) %>
-    <% d1 = Date.today %>
-    <% d0 = current_client.subscriptions.last.created_at %>
-    <% year_diff = d1.year - d0.year %>
-    <% month_diff = d1.month - d0.month %>
-    <% months = year_diff / 12 + month_diff %>
-    <% @total_available_hours = @current_plan_hours * months + 1 %>
-    <% @hours_remaining = @total_available_hours - @total_used_hours %>
+    <%   @projects = current_client.projects.all
+        @current_plan = Plan.find_by(:id => current_client.subscriptions.last.plan_id)
+        @current_plan_name = Plan.find_by(:id => current_client.subscriptions.last.plan_id).name
+        @current_plan_hours = Plan.find_by(:id => current_client.subscriptions.last.plan_id).hours.to_f
+        @total_used_hours = current_client.projects.sum(:hours)
+
+        d1 = Date.today
+        d0 = current_client.subscriptions.last.created_at
+        year_diff = d1.year - d0.year
+        month_diff = d1.month - d0.month + 1
+        months = year_diff / 12 + month_diff
+        @total_available_hours = @current_plan_hours * months + 1
+
+        @hours_remaining = @total_available_hours - @total_used_hours %>
+
 
   <div class="col-md-4">
     <h4 class="profile-small">Current Plan</p>

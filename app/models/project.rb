@@ -5,6 +5,6 @@ class Project < ApplicationRecord
   validates :status, presence: true
   validates :version, presence: true
   has_many :items, :class_name => "Item", :foreign_key => "project_id"
-  belongs_to :user, optional: true
+  belongs_to :client, optional: true
   belongs_to :designer, optional: true
 end

@@ -61,3 +61,6 @@ gem 'stripe'
 
 # add paperclip
 gem "carrierwave"
+
+gem 'activeadmin', '~> 1.0.0.pre4'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'

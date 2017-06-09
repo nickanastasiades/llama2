@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   devise_group :user, contains: [:client, :designer]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, :except => [:confirm_email]
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   protected
