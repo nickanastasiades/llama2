@@ -40,7 +40,7 @@
     <% if @project.designer_id.blank? %>
     <% designer_label = "Not Assigned Yet" %>
     <% else %>
-    <% designer_label = @project.designer_id %>
+    <% designer_label = @project.designer.first_name %>
     <% end %>
 
     <dt>Designer</dt>
