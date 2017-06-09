@@ -9,7 +9,7 @@
 <% end %>
 
 <div class="page-header">
-  <h3>Add Subscription</h3>
+  <h3>Choose Your Plan</h3>
 </div>
 
 <form action="/create_subscription" method="post">
@@ -20,54 +20,42 @@
 <div class="row pricing">
 					<div class="col-md-3">
 						<div class="well">
-							<h3><b>Plan 1</b></h3>
-							<hr>
-							<p>1 GB Datatransfer</p>
-							<hr>
-							<p>1 GB Storage</p>
-							<hr>
-							<p><b>€ 2,99 /PM</b></p>
-							<hr>
+							<p class="plan-logo"><img src="/images/llama-logo.png" style="width: 30px;" /></p>
+              <h3 class="plan-title">Trial</h3>
+							<p class="plan-price">FREE</p>
+							<p class="plan-hour"><b>1 hour</b></p>
+							<p class="plan-text">Great to test out the service and see if it works for you.</p>
 							<button class="btn btn-success btn-block" name="plan_id" value="1">Select</button>
 						</div>
 					</div>
-					<div class="col-md-3">
+          <div class="col-md-3">
 						<div class="well">
-							<h3><b>Plan 2</b></h3>
-							<hr>
-							<p>2 GB Datatransfer</p>
-							<hr>
-							<p>2 GB Storage</p>
-							<hr>
-							<p><b>€ 3,99 /PM</b></p>
-							<hr>
+							<p class="plan-logo"><img src="/images/llama-logo.png" style="width: 30px;" /></p>
+              <h3 class="plan-title">Startup</h3>
+							<p class="plan-price">$275</p>
+							<p class="plan-hour"><b>5 hrs/month</b></p>
+							<p class="plan-text">Great for social media and website updates.</p>
 							<button class="btn btn-success btn-block" name="plan_id" value="2">Select</button>
 						</div>
 					</div>
-					<div class="col-md-3">
+          <div class="col-md-3">
 						<div class="well">
-							<h3><b>Plan 3</b></h3>
-							<hr>
-							<p>3 GB Datatransfer</p>
-							<hr>
-							<p>3 GB Storage</p>
-							<hr>
-							<p><b>€ 4,99 /PM</b></p>
-							<hr>
+							<p class="plan-logo"><img src="/images/llama-logo.png" style="width: 30px;" /></p>
+              <h3 class="plan-title">Small Biz</h3>
+							<p class="plan-price">$500</p>
+							<p class="plan-hour"><b>10 hrs/month</b></p>
+							<p class="plan-text">Great for  marketing campaigns and updates.</p>
 							<button class="btn btn-success btn-block" name="plan_id" value="3">Select</button>
 						</div>
 					</div>
-					<div class="col-md-3">
-						<div class="well">
-							<h3><b>Plan 4</b></h3>
-							<hr>
-							<p>4 GB Datatransfer</p>
-							<hr>
-							<p>4 GB Storage</p>
-							<hr>
-							<p><b>€ 5,99 /PM</b></p>
-							<hr>
-              <button class="btn btn-success btn-block" name="plan_id" value="4">Select</button>
+          <div class="col-md-3">
+						<div class="well">  
+							<p class="plan-logo"><img src="/images/llama-logo.png" style="width: 30px;" /></p>
+              <h3 class="plan-title">VIP</h3>
+							<p class="plan-price">$850</p>
+							<p class="plan-hour"><b>20 hrs/month</b></p>
+							<p class="plan-text">Great for having a go-to marketing agency.</p>
+							<button class="btn btn-success btn-block" name="plan_id" value="4">Select</button>
 						</div>
 					</div>
 

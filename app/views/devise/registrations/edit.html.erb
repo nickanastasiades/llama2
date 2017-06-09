@@ -1,11 +1,17 @@
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h2 class="panel-title">Edit <%= resource_name.to_s.humanize %></h2>
-      </div>
 
-      <div class="panel-body">
+<div class="col-md-12">
+
+    <div class="page-header">
+    <h3>Edit Your Profile</h3>
+  </div>
+
+    </div>
+
+  <div class="col-md-7">
+    <div class="panel panel-default">
+        <%= devise_error_messages! %>
+    <div class="panel-body extra-padding">
 
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: "form-horizontal", role: "form" }) do |f| %>
           <%= devise_error_messages! %>
@@ -60,11 +66,6 @@
             </div>
           </div>
 
-          <div class="form-group">
-            <div class="col-sm-10 col-sm-offset-2">
-              <%= link_to "Back", :back, class: "btn btn-link btn-block" %>
-            </div>
-          </div>
         <% end %>
 
       </div>
@@ -82,5 +83,33 @@
       </div>
 
     </div>
+  </div>
+    <div class="col-md-1"></div>
+
+    <% @current_plan = Plan.find_by(:id => current_client.subscriptions.last.plan_id) %>
+    <% @current_plan_name = Plan.find_by(:id => current_client.subscriptions.last.plan_id).name %>
+    <% @current_plan_hours = Plan.find_by(:id => current_client.subscriptions.last.plan_id).hours.to_i %>
+    <% @total_used_hours = current_client.projects.sum(:hours) %>
+    <% d1 = Date.today %>
+    <% d0 = current_client.subscriptions.last.created_at %>
+    <% year_diff = d1.year - d0.year %>
+    <% month_diff = d1.month - d0.month %>
+    <% months = year_diff / 12 + month_diff %>
+    <% @total_available_hours = @current_plan_hours * months + 1 %>
+    <% @hours_remaining = @total_available_hours - @total_used_hours %>
+
+  <div class="col-md-4">
+    <h4 class="profile-small">Current Plan</p>
+    <h2 class="profile-big"><%= @current_plan_name %> <a href="/subscriptions/new" style="font-size: 22px; margin-left: 5px;"><small>Change</small></a></h2>
+    <hr/>
+    <h4 class="profile-small">Hours Remaining</p>
+    <h2 class="profile-big"><%= @hours_remaining %></h2>
+    <hr/>
+    <h4 class="profile-small">Member Since</p>
+    <h2 class="profile-big"><%= current_client.created_at.strftime("%B %Y") %></h2>
+    <hr/>
+    <h4 class="profile-small">Projects Created</p>
+    <h2 class="profile-big"><%= current_client.projects.count %></h2>
+    <hr/>
   </div>
 </div>
