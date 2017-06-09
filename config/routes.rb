@@ -92,7 +92,7 @@ Rails.application.routes.draw do
   get "/delete_project/:id", :controller => "projects", :action => "destroy"
   #------------------------------
 
-  devise_for :designers
+  devise_for :designers, :controllers => { :registrations => "designers/registrations" }
   devise_for :clients, :controllers => { :registrations => "clients/registrations" }
   get "/confirm_email", :controller => "subscriptions", :action => "confirm_email"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
